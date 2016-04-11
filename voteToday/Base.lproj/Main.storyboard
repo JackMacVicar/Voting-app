@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="voteToday" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="americanFlag" translatesAutoresizingMaskIntoConstraints="NO" id="jRE-XI-naC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0X-d8-BsY">
+                                <rect key="frame" x="-880" y="-622" width="2136" height="1737"/>
+                                <state key="normal" title="Vote Republican ">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="voteRepublican:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cf7-hi-Uge"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Republicanlogo.svg" translatesAutoresizingMaskIntoConstraints="NO" id="Jdd-wB-S0z">
+                                <rect key="frame" x="91" y="83" width="193" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Democratic-donkey" translatesAutoresizingMaskIntoConstraints="NO" id="bTX-kz-VnM">
+                                <rect key="frame" x="91" y="342" width="193" height="160"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yourVoteCounts" translatesAutoresizingMaskIntoConstraints="NO" id="AGC-P1-BLG">
+                                <rect key="frame" x="68" y="240" width="240" height="186"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmS-ph-fJa">
+                                <rect key="frame" x="-74" y="314" width="522" height="400"/>
+                                <state key="normal" title="Vote Democrat">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="voteDemocrat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CJ0-MM-5ss"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="democratButton" destination="CmS-ph-fJa" id="rbb-4v-ewh"/>
+                        <outlet property="democratLogo" destination="bTX-kz-VnM" id="ciQ-Wg-1BJ"/>
+                        <outlet property="rebulicanLogo" destination="Jdd-wB-S0z" id="z1d-W7-QD0"/>
+                        <outlet property="republicanButton" destination="K0X-d8-BsY" id="pKh-WI-Fn7"/>
+                        <outlet property="yourVoteCounts" destination="AGC-P1-BLG" id="1oN-RJ-aX1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.5" y="312.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Democratic-donkey" width="252" height="216"/>
+        <image name="Republicanlogo.svg" width="2000" height="1737"/>
+        <image name="americanFlag" width="736" height="558"/>
+        <image name="yourVoteCounts" width="400" height="400"/>
+    </resources>
+</document>
